@@ -1,194 +1,146 @@
-Bias–Variance Tradeoff in Machine Learning
-Overview
+# Bias–Variance Tradeoff in Machine Learning
 
-The Bias–Variance Tradeoff is one of the most important concepts in machine learning. It explains the balance between a model’s ability to learn patterns from training data and its ability to generalize to unseen data.
+## Overview
+The **Bias–Variance Tradeoff** is one of the most important concepts in machine learning. It explains the balance between a model’s ability to learn patterns from training data and its ability to generalize to unseen data.
 
 In this project, we explore:
 
-Bias
+- Bias
+- Variance
+- Underfitting
+- Overfitting
+- Model complexity
 
-Variance
+Understanding this concept helps build models that **generalize well instead of memorizing training data**.
 
-Underfitting
+---
 
-Overfitting
+## What is Bias?
 
-How model complexity affects prediction performance
-
-Understanding this concept helps in building models that generalize well instead of memorizing training data.
-
-What is Bias?
-
-Bias refers to the error caused by overly simplistic assumptions in the learning algorithm.
+**Bias** refers to the error caused by overly simplistic assumptions in the learning algorithm.
 
 High bias models:
 
-Are too simple
-
-Fail to capture underlying patterns
-
-Lead to underfitting
+- Are too simple
+- Fail to capture underlying patterns
+- Lead to **underfitting**
 
 Example models with high bias:
 
-Linear regression on nonlinear data
-
-Very shallow decision trees
+- Linear regression on nonlinear data
+- Very shallow decision trees
 
 Characteristics of high bias:
 
-Poor performance on training data
+- Poor performance on training data
+- Poor performance on test data
+- Model too simple to learn patterns
 
-Poor performance on test data
+---
 
-Model too simple to learn patterns
+## What is Variance?
 
-What is Variance?
-
-Variance refers to how sensitive a model is to changes in the training data.
+**Variance** refers to how sensitive a model is to changes in the training data.
 
 High variance models:
 
-Learn noise from training data
+- Learn noise from training data
+- Perform well on training data
+- Perform poorly on unseen data
 
-Perform well on training data
-
-Perform poorly on unseen data
-
-This leads to overfitting.
+This leads to **overfitting**.
 
 Examples of high variance models:
 
-Very deep decision trees
+- Very deep decision trees
+- High-degree polynomial regression
+- Complex neural networks
 
-High-degree polynomial regression
+---
 
-Complex neural networks
-
-Mathematical Representation
+## Error Decomposition
 
 The prediction error of a machine learning model can be decomposed into three parts:
 
-Bias²
+- Bias²
+- Variance
+- Irreducible Error
 
-Variance
+Total Error = Bias² + Variance + Irreducible Error
 
-Irreducible Error
+The goal of machine learning is to **minimize total error** by balancing bias and variance.
 
-Error = Bias^2 + Variance + Irreducible Error
+---
 
-Goal of machine learning is to minimize total error by balancing bias and variance.
+## Underfitting vs Overfitting
 
-Underfitting vs Overfitting
-Model Behavior	Cause	Result
-Underfitting	High Bias	Model too simple
-Overfitting	High Variance	Model memorizes data
-Good Fit	Balanced Bias & Variance	Best generalization
-Bias–Variance Tradeoff
+| Model Behavior | Cause | Result |
+|----------------|------|-------|
+| Underfitting | High Bias | Model too simple |
+| Overfitting | High Variance | Model memorizes data |
+| Good Fit | Balanced Bias & Variance | Best generalization |
+
+---
+
+## Bias–Variance Tradeoff
 
 Increasing model complexity usually:
 
-Decreases bias
+- **Decreases bias**
+- **Increases variance**
 
-Increases variance
+This creates a tradeoff where we must find the **optimal model complexity**.
 
-This creates a tradeoff where we must find the optimal model complexity.
+| Model Complexity | Bias | Variance |
+|------------------|------|---------|
+| Simple Model | High | Low |
+| Medium Complexity | Balanced | Balanced |
+| Complex Model | Low | High |
 
-Typical behavior:
+The best model lies in the **middle of this curve**.
 
-Model Complexity	Bias	Variance
-Simple model	High	Low
-Medium complexity	Balanced	Balanced
-Complex model	Low	High
+---
 
-The best model lies in the middle of this curve.
-
-Example Models
-High Bias Model
-
-Linear regression on complex data
-
-Underfits the dataset
-
-Balanced Model
-
-Polynomial regression with appropriate degree
-
-Captures patterns without overfitting
-
-High Variance Model
-
-Deep neural network
-
-Memorizes training data
-
-Techniques to Reduce Bias
+## Techniques to Reduce Bias
 
 Methods to reduce bias include:
 
-Using more complex models
+- Using more complex models
+- Adding more features
+- Increasing training time
+- Using ensemble models
 
-Adding more features
+---
 
-Using ensemble methods
-
-Increasing training time
-
-Techniques to Reduce Variance
+## Techniques to Reduce Variance
 
 Methods to reduce variance include:
 
-Increasing training data
+- Increasing training data
+- Regularization (L1 / L2)
+- Cross validation
+- Pruning decision trees
+- Dropout in neural networks
 
-Regularization (L1 / L2)
+---
 
-Cross validation
+## Technologies Used
 
-Pruning decision trees
+- Python
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Jupyter Notebook
 
-Dropout in neural networks
+---
 
-Practical Example
+## Key Takeaways
 
-In this notebook we demonstrate:
+- Bias represents **model simplicity**
+- Variance represents **model sensitivity to data**
+- Increasing complexity reduces bias but increases variance
+- The goal is to **balance bias and variance to achieve the best model performance**
 
-Training a regression model
+Understanding the bias–variance tradeoff is essential for building **robust machine learning models that generalize well to unseen data**.
 
-Observing underfitting
-
-Increasing model complexity
-
-Observing overfitting
-
-Finding a balanced model
-
-Technologies Used
-
-Python
-
-NumPy
-
-Scikit-Learn
-
-Matplotlib
-
-Jupyter Notebook
-
-Repository Structure
-machine-learning
-│
-└── 01_bias_variance
-    │
-    ├── bias_variance_demo.ipynb
-    └── README.md
-Key Takeaways
-
-Bias represents model simplicity
-
-Variance represents model sensitivity to data
-
-Increasing complexity reduces bias but increases variance
-
-The goal is to find a balance that minimizes prediction error
-
-Understanding the bias–variance tradeoff is essential for building robust machine learning models that generalize well to new data.
+## Repository Structure
