@@ -24,6 +24,7 @@ The objective of this project is to **build predictive models that classify whet
 ## Dataset Description
 
 The dataset contains patient information including demographic details, clinical data, and healthcare utilization metrics.
+The dataset used in this project was provided as part of coursework.Due to data sharing restrictions, it is not included in this repository.
 
 ### Target Variable
 | Variable | Description |
