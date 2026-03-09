@@ -48,6 +48,8 @@ The dataset used in this project was provided as part of coursework.Due to data 
 - n_procedures
 - n_medications
 
+![Data](images/sample%20data.png)
+
 ---
 
 ## Machine Learning Workflow
@@ -76,6 +78,8 @@ EDA was performed to understand the dataset characteristics including:
 - Data imbalance
 
 Visualization and summary statistics were used to better understand the dataset before training the models.
+
+![Data](images/percentage%20distribution.png)
 
 ---
 
@@ -133,18 +137,7 @@ Model performance was evaluated using standard classification metrics such as:
 
 These metrics help determine how well the models predict patient readmissions.
 
----
-
-## Model Comparison
-
-Both models were compared to determine which performs better in predicting hospital readmissions.
-
-Key aspects evaluated:
-
-- Prediction accuracy
-- Model generalization
-- Interpretability
-- Robustness
+![Data](images/model%20comparison.png)
 
 ---
 
