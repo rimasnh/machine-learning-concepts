@@ -187,9 +187,3 @@ Potential improvements to this project include:
 
 - Testing additional models such as Gradient Boosting or XGBoost
 - Use the computed feature importance list to train a linear model (e.g. logistic regression) as a means of feature selection.
-
-## Author
-
-**Rima Sinha**  
-MS Data Science  
-Saint Peter’s University
